@@ -8,10 +8,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 //8-
 import uiSlice from "./ui-slice";
+import cartSlice from "./cart-slice";
 
 //7-configureStore need to have obj where we setup our root reducer
 const store = configureStore({
-  reducer: { ui: uiSlice.reducer },
+  reducer: { ui: uiSlice.reducer, cart: cartSlice.reducer },
 });
 //9-(go to main index.js)
 export default store;
