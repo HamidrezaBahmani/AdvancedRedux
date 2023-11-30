@@ -8,7 +8,6 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItemToCart(state, action) {
-      //payload reduxt toolkit sets for us which contain any extra data we add to the action
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.totalQuantity++;
@@ -33,7 +32,6 @@ const cartSlice = createSlice({
         state.items = state.items.filter((item) => item.id !== id);
       } else {
         existingItem.quantity--;
-        // existingItem.totalPrice = existingItem.totalPrice - existingItem.price;
       }
     },
   },

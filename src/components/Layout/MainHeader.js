@@ -8,7 +8,6 @@ const MainHeader = (props) => {
       <nav>
         <ul>
           <li>
-            {/* {13-go to CartButton} */}
             <CartButton />
           </li>
         </ul>
